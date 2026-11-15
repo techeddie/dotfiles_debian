@@ -55,7 +55,6 @@ link() {
 }
 
 # ---- Sanity checks ----
-[[ $EUID -ne 0 ]] || die "Run as a normal user, not root (sudo is used where needed)."
 command -v apt-get >/dev/null || die "This script needs apt (Debian)."
 sudo -v || die "sudo is required."
 
