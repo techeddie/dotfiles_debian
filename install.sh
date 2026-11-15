@@ -3,7 +3,7 @@
 # Usage:
 #   ./install.sh                     (can be run from any folder, e.g. a mounted host volume)
 #   REPO_DIR=/some/path ./install.sh (override clone target)
-# Config repos are always cloned to $REPO_DIR (default ~/opt/debian_dotfiles)
+# Config repos are always cloned to $REPO_DIR (default ~/opt/dotfiles_debian)
 # and linked from there into ~/.config.
 # Re-running the script updates repos and tools to the latest versions.
 set -euo pipefail
@@ -12,7 +12,7 @@ set -euo pipefail
 GITHUB_USER="techeddie"
 REPOS=(fish_debian nvim_debian tmux_debian lf_debian lazygit_debian)
 # Config repos are cloned here, independent of where this script lives
-REPO_DIR="${REPO_DIR:-$HOME/opt/debian_dotfiles}"
+REPO_DIR="${REPO_DIR:-$HOME/opt/dotfiles_debian}"
 LOCAL_BIN="$HOME/.local/bin"
 
 APT_PACKAGES=(
